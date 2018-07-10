@@ -15,3 +15,6 @@ Note: if successful, you should see the image ID
 > docker run -it <imageID> /bin/sh
 > docker ps -a --format "{{.ID}}\t{{.Names}}\t{{.Image}}"
 
+# remove containers and images
+> docker rm <containerID>
+> docker rmi <imageID>
