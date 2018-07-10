@@ -1,0 +1,17 @@
+
+# environment
+install docker
+we assume you are in a directory where your Dockerfile and simple.sh are located
+make sure your script is executable
+> chmod 777 simple.sh
+
+# create the image
+> docker build . --tag test/c1
+> docker images --format "{{.ID}}\t{{.Repository}}"
+Note: if successful, you should see the image ID
+
+# run the image and manage containers
+> docker run --name c1_test <imageID>
+> docker run -it <imageID> /bin/sh
+> docker ps -a --format "{{.ID}}\t{{.Names}}\t{{.Image}}"
+
